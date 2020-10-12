@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE7D0CE8-29C4-4D96-88F3-1F2DA6ABFFCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lib</RootNamespace>
+    <AssemblyName>Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\AnimationFrameType.cs" />
+    <Compile Include="Enums\Color.cs" />
+    <Compile Include="Enums\Direction.cs" />
+    <Compile Include="Enums\PathType.cs" />
+    <Compile Include="implementations\classesOptions\AnimationOptions.cs" />
+    <Compile Include="implementations\classes\Animation.cs" />
+    <Compile Include="implementations\classes\Colored2dLocations.cs" />
+    <Compile Include="implementations\classesOptions\PathOptions.cs" />
+    <Compile Include="implementations\classes\SimultaneousAnimationFrame.cs" />
+    <Compile Include="implementations\classesOptions\AnimationFrameOptions.cs" />
+    <Compile Include="implementations\classes\ConsecutiveAnimationFrame.cs" />
+    <Compile Include="implementations\classes\Factory.cs" />
+    <Compile Include="implementations\classes\Location.cs" />
+    <Compile Include="implementations\classes\LocationsGenerator.cs" />
+    <Compile Include="implementations\classesOptions\LocationsGeneratorOptions.cs" />
+    <Compile Include="implementations\classes\Path.cs" />
+    <Compile Include="interfaces\classInterfaces\I2dLocation.cs" />
+    <Compile Include="interfaces\classInterfaces\IAnimation.cs" />
+    <Compile Include="interfaces\classInterfaces\IAnimationFrame.cs" />
+    <Compile Include="interfaces\classOptionsInterfaces\IAnimationFrameOptions.cs" />
+    <Compile Include="interfaces\classInterfaces\IColored2dLocations.cs" />
+    <Compile Include="interfaces\classInterfaces\IPath.cs" />
+    <Compile Include="interfaces\classOptionsInterfaces\IAnimationOptions.cs" />
+    <Compile Include="interfaces\classInterfaces\ILocationsGenerator.cs" />
+    <Compile Include="interfaces\classOptionsInterfaces\ILocationsGeneratorOptions.cs" />
+    <Compile Include="interfaces\classInterfaces\IOutputEngine.cs" />
+    <Compile Include="interfaces\classOptionsInterfaces\IPathOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
